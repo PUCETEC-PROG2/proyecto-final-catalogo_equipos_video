@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'catalogo_equipos_video.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nombre_de_tu_base_de_datos',
-        'USER': 'nelson',
-        'PASSWORD': '1725279242',
+        'NAME': 'catalogo',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -125,3 +125,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_ROOT = BASE_DIR / 'static files'
+
+STATICFILES_DIR = {
+    BASE_DIR / 'static'
+}
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL="/"
+LOGOUT_REDIRECT_URL="/"
+LOGIN_URL = "catalogo:login"
